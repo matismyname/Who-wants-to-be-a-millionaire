@@ -1,0 +1,42 @@
+{
+    "Questions" : [
+    {
+        "Where is France?" : ["In the EU"],
+        "Who was not a mathematician?" : ["Bobby Fischer"],
+        "What language is not officially spoken in switzerland?" : ["Spanish"],
+        "When did the second world war end?" : ["1945"],
+        "What board game is centuries old?" : ["Chess"],
+        "Who is the president of Russia?" : ["Vladimir Putin"],
+        "Which city is in China?" : ["Beijing"],
+        "When did the US gain independence?" : ["1776"],
+        "Which was the largest empire in the world?" : ["British Empire"],
+        "Who discovered Polonium?" : ["Marie Curie"],
+        "Which one of these is not a currency?" : ["FIL"],
+        "What was (one) of the causes of the french revolution?" : ["High bread prices"],
+        "Who created the programming language Python?" : ["Guido van Rossum"],
+        "Where is Area51?" : ["Nevada"],
+        "Who painted the Praying Hands?" : ["Albrecht Durer"]
+
+    }
+],
+    "False Answers" : [
+        {
+            "False answers 1" : ["In Asia", "In South America", "In North America"],
+            "False answers 2" : ["Bernhard Riemann", "Blaise Pascal", "Leonhard Euler"],
+            "False answers 3" : ["French", "German", "Italian"],
+            "False answers 4" : ["1939", "1946", "1943"],
+            "False answers 5" : ["Monopoly", "Scrabble", "Risk"],
+            "False answers 6" : ["Anton Checkov", "Angela Merkel", "Janos Ader"],
+            "False answers 7" : ["Paris", "Tokyo", "Berlin"],
+            "False answers 8" : ["1780", "1778", "1770"],
+            "False answers 9" : ["Mongol Empire", "Russian Empire", "Roman Empire"], 
+            "False answers 10" : ["Albert Einstein", "Max Planck", "Alan Turing"],
+            "False answers 11" : ["EUR", "USD", "JPY"],
+            "False answers 12" : ["Not enough cake", "Bad weather", "Boredom"],
+            "False answers 13" : ["Linus Torvalds", "Alan Schwartz", "Edward Snowden"],
+            "False answers 14" : ["Alaska", "Mexiko", "Washington"],
+            "False answers 15" : ["Leonardo da Vinci", "Vincent van Gogh", "Hundertwasser"] 
+        }
+
+    ]
+}

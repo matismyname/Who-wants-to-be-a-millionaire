@@ -1,4 +1,5 @@
 from start_window import window_of_app
+import os
 
 title_of_game = "Who wants to be a millionaire?"
 height_of_window = 600
@@ -10,7 +11,7 @@ var_menu_language = "Language"
 var_menu_eng = "English"
 var_menu_deu = "German"
 var_menu_info_about_game = "Info about the game"
-var_menu_dedication = "Dedication"
+os.chdir("C:/Users/mat97/Desktop/Python Programs/Who_wants_to_be_a_millionaire")
 
 
 def main():
@@ -23,8 +24,7 @@ def main():
     var_menu_language,
     var_menu_eng,
     var_menu_deu,
-    var_menu_info_about_game,
-    var_menu_dedication)
+    var_menu_info_about_game)
     app.start_app()
 
 

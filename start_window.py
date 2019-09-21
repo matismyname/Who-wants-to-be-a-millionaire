@@ -2,8 +2,9 @@ from tkinter import *
 from PIL import ImageTk
 from PIL import Image as PilImage
 from tkinter import messagebox
-from questions import *
 from window_format import game_window
+from question_class import question_class
+import json
 
 
 class window_of_app:
@@ -18,9 +19,9 @@ class window_of_app:
     var_menu_language,
     var_menu_eng,
     var_menu_deu,
-    var_menu_info_about_game,
-    var_menu_dedication):
+    var_menu_info_about_game):
         self.window = Tk()
+        self.window.resizable(False, False)
         self.bool_eng = bool_eng #If the game is in english, bool is true
         self.title_of_game = title_of_game
         self.height_of_window = height_of_window
@@ -31,7 +32,11 @@ class window_of_app:
         self.var_menu_eng = var_menu_eng
         self.var_menu_deu = var_menu_deu
         self.var_menu_info_about_game = var_menu_info_about_game
-        self.var_menu_dedication = var_menu_dedication
+
+
+        self.money_pic = ImageTk.PhotoImage(PilImage.open("money_pic.jpg"))
+        self.background_pic = Label(self.window, image=self.money_pic)
+        self.background_pic.place(x=0, y=0, relwidth=1, relheight=1)
         
 
     def start_app(self):
@@ -80,7 +85,6 @@ class window_of_app:
         self.info_menu = Menu(self.menu, tearoff = 0)
         self.menu.add_cascade(label = "Info", menu = self.info_menu)
         self.info_menu.add_command(label = self.var_menu_info_about_game, command = self.info_about_game)
-        self.info_menu.add_command(label = self.var_menu_dedication, command = self.dedication)
 
         self.window.mainloop()
 
@@ -94,8 +98,7 @@ class window_of_app:
         "Language",
         "English",
         "German",
-        "Info about the game",
-        "Dedication")
+        "Info about the game")
         window_of_app.start_app(self)
 
 
@@ -104,28 +107,26 @@ class window_of_app:
         window_of_app.__init__(self,
         False,
         "Wer wir Millionär?",
+        600,
+        400,
         "Spiel beenden",
         "Spiel Starten",
         "Sprache",
         "Englisch",
         "Deutsch",
-        "Info über das Spiel",
-        "Widmung")
+        "Info über das Spiel")
         window_of_app.start_app(self)
     
     def info_about_game(self):
         if self.bool_eng:
             messagebox.showinfo("Info about the game", "In this game you will be asked 15 questions. " +
-             "You must get every question correct to win. " + "There are lifelines as well. Good luck!")
+             "You must get every question correct to win. " + "Good luck!")
         else:
             messagebox.showinfo("Info über das Spiel", "In diesem Spiel werden dir 15 Fragen gestellt. " +
-             "Du musst jede korrekt beantworten, um zu gewinnen! " + "Es gibt auch Joker! Viel Erfolg!")
+             "Du musst jede korrekt beantworten, um zu gewinnen! " + "Viel Erfolg!")
         
-
-    def dedication(self):
-        pass
     
 
     def start_the_game(self):
         self.window.destroy()
-        questions(self.bool_eng)
+        question_class(self.bool_eng).start()
