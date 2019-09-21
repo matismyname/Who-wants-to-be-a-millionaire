@@ -11,7 +11,7 @@ var_menu_language = "Language"
 var_menu_eng = "English"
 var_menu_deu = "German"
 var_menu_info_about_game = "Info about the game"
-os.chdir("C:/Users/mat97/Desktop/Python Programs/Who_wants_to_be_a_millionaire")
+os.chdir("Change/to/where/the/code/is/and/the/pictures")
 
 
 def main():
